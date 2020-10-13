@@ -315,7 +315,7 @@ $(function() {
 												<fieldset style="width:100%;">
 													<div class="cmt_form" style="overflow: unset;">
 														<div class="cmt_body">
-															<textarea name="dreContent" style="resize: none; width: 100%;  minlength="2" required min-height: 100px; max-height: 100px;">${ d.dreContent }</textarea>
+															<textarea name="dreContent" style="resize: none; width: 100%;  minlength="2" required min-height: 100px; max-height: 100px;"></textarea>
 															<div class="cmt_ok">
 																<input type="submit" class="updateDreply" value="수정">
 															</div>

@@ -338,6 +338,12 @@ public class DboardController {
 			}
 		}
 		
+		int dreplyCount = dreplyService.seletListCount(dboard.getdNum()); // 게시물의 댓글 갯수를 구한다
+		ArrayList<Dreply> dreplyList = dreplyService.selectList(dboard.getdNum()); //댓글 리스트 
+		
+		model.addAttribute("dreplyCount" , dreplyCount);
+		model.addAttribute("dreplyList", dreplyList);
+		
 		// 리턴은 한번 하기 위해 url 값 받고 리턴
 		String url = "";
 		if (dboardService.updateDboard(dboard) > 0) {
@@ -414,6 +420,11 @@ public class DboardController {
 		dboard = dboardService.selectOne(dboardNextNum);
 		// 리턴은 한번 하기 위해 url 값 받고 리턴
 		
+		int dreplyCount = dreplyService.seletListCount(dboard.getdNum()); // 게시물의 댓글 갯수를 구한다
+		ArrayList<Dreply> dreplyList = dreplyService.selectList(dboard.getdNum()); //댓글 리스트 
+		
+		model.addAttribute("dreplyCount" , dreplyCount);
+		model.addAttribute("dreplyList", dreplyList);
 		
 		String url = "";
 		if (beforeNum != dboardNextNum) {
@@ -446,6 +457,12 @@ public class DboardController {
 		//이전글번호를 받고 다음글로 조회
 		dboard = dboardService.selectOne(dboardPrevNum);
 		// 리턴은 한번 하기 위해 url 값 받고 리턴
+		
+		int dreplyCount = dreplyService.seletListCount(dboard.getdNum()); // 게시물의 댓글 갯수를 구한다
+		ArrayList<Dreply> dreplyList = dreplyService.selectList(dboard.getdNum()); //댓글 리스트 
+		
+		model.addAttribute("dreplyCount" , dreplyCount);
+		model.addAttribute("dreplyList", dreplyList);
 		
 		String url = "";
 		if (beforeNum != dboardPrevNum) {
