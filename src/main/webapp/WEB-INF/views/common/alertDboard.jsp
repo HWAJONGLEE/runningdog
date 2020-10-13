@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Error</title>
+<title>Alert</title>
 </head>
 <body>
 <script type="text/javascript">
