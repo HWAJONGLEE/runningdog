@@ -22,7 +22,7 @@
 
 
 * [RunningDog Project Site 이동](http://116.125.180.15:9392/runningdog/)<br>
-admin 계정 : 
+admin 계정 : admin@runningdog.com 비밀번호 : rhddb1234!!
 ### 기능설명
 --------------------------
 
