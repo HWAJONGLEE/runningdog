@@ -4,7 +4,7 @@
 
 - 유기견 주인찾기 CRUD
 - 유기견 주인찾기 게시판 댓글 구현
-- 유기견 정보 List View 카카오 API 연동
+- 유기견 정보(공공데이터 API) List View 카카오지도 API 연동
 
 중고장터리스트는 속도 향상을 위해 이미지 리사이징을 하고 저장한 후 출력시켰습니다.<br>
 
@@ -21,7 +21,8 @@
 * [/views/admin/userBoard/chooseAdminView.jsp](https://github.com/HWAJONGLEE/runningdog/blob/master/src/main/webapp/WEB-INF/views/admin/userBoard/chooseAdminView.jsp)<br>
 
 
-
+* [RunningDog Project Site 이동](http://116.125.180.15:9392/runningdog/)<br>
+admin 계정 : 
 ### 기능설명
 --------------------------
 
