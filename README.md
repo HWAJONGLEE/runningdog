@@ -21,8 +21,8 @@
 * [/views/admin/userBoard/chooseAdminView.jsp](https://github.com/HWAJONGLEE/runningdog/blob/master/src/main/webapp/WEB-INF/views/admin/userBoard/chooseAdminView.jsp)<br>
 
 
-* [RunningDog Project 유기동물 주인찾기 Page이동](http://116.125.180.15:9392/runningdog/dboardList.do)<br>
-* [RunningDog Project 유기동물 정보 Page이동](http://116.125.180.15:9392/runningdog/animalList.do)<br>
+* [RunningDog Project 유기동물 주인찾기 Page이동](http://116.125.180.15:9392/runningdog/dboardList.do){: target="_blank"}<br>
+* [RunningDog Project 유기동물 정보 Page이동](http://116.125.180.15:9392/runningdog/animalList.do){: target="_blank"}<br>
 
 admin 계정 : admin@runningdog.com 비밀번호 : rhddb1234!!
 ### 기능설명
