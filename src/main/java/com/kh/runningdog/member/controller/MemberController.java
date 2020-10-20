@@ -33,6 +33,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.kh.runningdog.chatting.model.service.ChatroomService;
 import com.kh.runningdog.chatting.model.vo.Chatroom;
+import com.kh.runningdog.dboard.model.vo.Dboard;
 import com.kh.runningdog.member.model.service.MemberService;
 import com.kh.runningdog.member.model.vo.FindUtil;
 import com.kh.runningdog.member.model.vo.MailUtil;
@@ -101,7 +102,7 @@ public class MemberController {
 	
 	//로그인컨트롤러
 	@RequestMapping(value="loginAction.do", method=RequestMethod.POST)
-	public String loginMethod(Member member, Chatroom room, Model model, HttpSession session, HttpServletResponse response, SessionStatus status) throws IOException {
+	public String loginMethod(Member member, Chatroom room,Model model, HttpSession session, HttpServletResponse response, SessionStatus status) throws IOException {
 		logger.info("loginAction run...");
 		Member loginMember = memberService.selectLogin(member);
 		ArrayList<Integer> myChatList = null;
@@ -117,7 +118,8 @@ public class MemberController {
 				
 				session.setAttribute("loginMember", loginMember);
 				status.setComplete(); // 요청성공, 200 전송
-				url = "main/main";
+				
+				url = "redirect:/dboardList.do";
 			} else {
 	            response.setContentType("text/html; charset=UTF-8");
 	            PrintWriter out = response.getWriter();
@@ -149,7 +151,7 @@ public class MemberController {
 		//세션 로그아웃 처리
 		if(session != null) {
 			session.invalidate();
-			return "main/main";
+			return "redirect:/dboardList.do";
 		}else{
 			session.setAttribute("message", "로그아웃 실패");
 			return "common/error";

@@ -154,16 +154,19 @@ public class AnimalController {
 	}
 	
 	@RequestMapping("animalNext.do")
-	public String animalNext(HttpServletRequest request, Model model, Animal animal) {
+	public String animalNext(Model model, Animal animal) {
 		
 		//pageVO 로 페이징처리, 검색값 유지
 		model.addAttribute("pageVO" , animal);
+		String beforeNum = animal.getDesertionNo();
+		
 		String animalNextNum = animalService.selectNext(animal);
 		
-		Animal animalNext = animalService.selectOne(animalNextNum);
+		animal = animalService.selectOne(animalNextNum);
+		
 		String url="";
-		if( !(animal.getDesertionNo().equals(animalNextNum))) {
-			model.addAttribute("animal", animalNext);
+		if( !(beforeNum.equals(animalNextNum))) {
+			model.addAttribute("animal", animal);
 			url = "animal/animalView";
 		}else {
 			model.addAttribute("animal" , animal);
@@ -181,12 +184,15 @@ public class AnimalController {
 		//pageVO 로 페이징처리, 검색값 유지
 		model.addAttribute("pageVO" , animal);
 		
+		String beforeNum = animal.getDesertionNo();
+		
 		String animalPrevNum = animalService.selectPrev(animal);
-		Animal animalPrev = animalService.selectOne(animalPrevNum);
+		
+		animal = animalService.selectOne(animalPrevNum);
 		
 		String url="";
-		if( !(animal.getDesertionNo().equals(animalPrevNum))) {
-			model.addAttribute("animal", animalPrev);
+		if(!(beforeNum.equals(animalPrevNum))) {
+			model.addAttribute("animal", animal);
 			url = "animal/animalView";
 		}else {
 			model.addAttribute("animal" , animal);

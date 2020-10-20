@@ -151,7 +151,6 @@ $(function(){
          var id = $(this).attr('data-id');
          var title = $(this).attr('data-title').replace(/\'/g, "&#39;");
          var image = $(this).attr('data-image');
-         console.log("되나 한번 보자"+id+title+image);
          
          var value = "";
          value += "<a href='javascript:snsGo1(1,"+id+", \""+ title + "\");'><img src='resources/images/snsIcn/sns_naver.png' style='width:30px;' alt='네이버'></a>&nbsp;&nbsp;";
@@ -180,7 +179,7 @@ $(document).on('click', function (e) {
 });
 function CopyUrltoClipBoard(id) {
    //window.document.location.href -> 현재 url정보 얻는 방법
-   var obShareUrl = "http://192.168.30.34:9392/runningdog/dboardView.do?dNum=" + id;
+   var obShareUrl = "http://116.125.180.15:9392/runningdog/dboardView.do?dNum=" + id;
 
    console.log(obShareUrl);
    var t = document.createElement("textarea");
@@ -194,7 +193,7 @@ function CopyUrltoClipBoard(id) {
 }
 
 function snsGo1(e, id,title) {
-	var url = "http://192.168.30.34:9392/runningdog/dboardView.do?dNum=" + id;
+	var url = "http://116.125.180.15:9392/runningdog/dboardView.do?dNum=" + id;
      
      console.log(title + url)
      
@@ -216,8 +215,8 @@ function sendLink1(id,title, img) {
  
  //Kakao.init('53d444db7d449eb66c0229426868cf97');
  //var shareurl = "http:/192.168.130.170:9392/runningdog/"+ url
- var shareurl = "http://192.168.30.34:9392/runningdog/dboardView.do?dNum=" + id;
- var image = "http://192.168.30.34:9392/runningdog/resources/dboard/dboardImage/" + img
+ var shareurl = "http://116.125.180.15:9392/runningdog/dboardView.do?dNum=" + id;
+ var image = "http://116.125.180.15:9392/runningdog/resources/dboard/dboardImage/" + img
  console.log("kakaoSendLink"+ shareurl + title + image);
  
  
@@ -285,7 +284,7 @@ $('[data-toggle="popover5"],[data-original-title]').each(function () {
 });
 function CopyUrltoClipBoard(id) {
  //window.document.location.href -> 현재 url정보 얻는 방법
- var obShareUrl = "http://192.168.30.34:9392/runningdog/animalView.do?desertionNo=" + id;
+ var obShareUrl = "http://116.125.180.15:9392/runningdog/animalView.do?desertionNo=" + id;
 
  console.log(obShareUrl);
  var t = document.createElement("textarea");
@@ -299,7 +298,7 @@ function CopyUrltoClipBoard(id) {
 }
 
 function snsGo(e, id,title) {
-	var url = "http://192.168.30.34:9392/runningdog/animalView.do?desertionNo=" + id;
+	var url = "http://116.125.180.15:9392/runningdog/animalView.do?desertionNo=" + id;
    
    console.log(title + url)
    
@@ -321,7 +320,7 @@ function sendLink1(id,title, img) {
 
 //Kakao.init('53d444db7d449eb66c0229426868cf97');
 //var shareurl = "http:/192.168.130.170:9392/runningdog/"+ url
-var shareurl = "http://192.168.30.34:9392/runningdog/animalView.do?desertionNo=" + id;
+var shareurl = "http://116.125.180.15:9392/runningdog/animalView.do?desertionNo=" + id;
 var image =  img;
 console.log("kakaoSendLink"+ shareurl + title + image);
 

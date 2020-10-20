@@ -76,8 +76,8 @@
                                 <li class="grid-item" >
                                     <div>
                                         <a href="${ animalView }" class="chooseIcon">분양중</a>
-                                        <a data-id="${ a.desertionNo }" data-title="${ a.careAddr }" data-summary="${ a.specialMark }" data-image="${ a.popfile }"
-                                  		data-toggle="popover5" class="urlIcon xi-share-alt-o"></a>
+                                       <%--  <a data-id="${ a.desertionNo }" data-title="${ a.careAddr }" data-summary="${ a.specialMark }" data-image="${ a.popfile }"
+                                  		data-toggle="popover5" class="urlIcon xi-share-alt-o"></a> --%>
                                         <a class="animalImg" href="${ animalView }"><img src="${ a.popfile }"></a>
                                     </div>
                                     <h3 onclick="location='${ animalView }'">${ a.kindCd }</h3>

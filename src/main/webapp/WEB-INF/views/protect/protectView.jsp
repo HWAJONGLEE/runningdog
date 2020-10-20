@@ -89,7 +89,7 @@
                                 </dt>
                                 <dd>
                                     <div id="map" style="width:100%;height:350px;"></div>
-                                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=78554901e4ce05b55a812c066e4b2f3b&libraries=services"></script>
+                                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=68c702b1618fe5e7850fb8b93c89734b&libraries=services"></script>
                                   <script>
                                   var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                                   mapOption = {

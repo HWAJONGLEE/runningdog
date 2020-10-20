@@ -103,7 +103,7 @@ public class ProtectController {
 		} else {
 			model.addAttribute("msg", "검색 결과가 존재 하지 않습니다");
 			model.addAttribute("url", "movePlist.do");
-			url = "common/errorDboard";
+			url = "common/alertDboard";
 		}
 		
 		return url;
@@ -219,7 +219,7 @@ public class ProtectController {
 		}else {
 			model.addAttribute("msg", "게시글을 볼 수 없습니다.");
 			model.addAttribute("url", "movePlist.do");
-			url = "common/errorDboard";
+			url = "common/alertDboard";
 		}
 		return url;
 	}
@@ -248,7 +248,7 @@ public class ProtectController {
 			model.addAttribute("protect", protect);
 			model.addAttribute("msg", "현재 글이 마지막 글 입니다.");
 			model.addAttribute("url", "javascript:history.back()");
-			url = "common/errorDboard";
+			url = "common/alertDboard";
 		}
 			return url;
 		}
@@ -277,7 +277,7 @@ public class ProtectController {
 				model.addAttribute("protect",protect);
 				model.addAttribute("msg", "현재 글이 마지막 글 입니다.");
 				model.addAttribute("url", "javascript:history.back()");
-				url = "common/errorDboard";
+				url = "common/alertDboard";
 			}
 			return url;
 		}

@@ -402,7 +402,7 @@ public class DboardController {
     }
 	
 	@RequestMapping("dboardnext.do")
-	public String dboardNext(HttpServletRequest request,Model model,Dboard dboard) {
+	public String dboardNext(Model model,Dboard dboard) {
 		
 		logger.info("SearchFiled : " + dboard.getSearchFiled());
 		logger.info("SearchValue : " + dboard.getSearchValue());
@@ -440,7 +440,7 @@ public class DboardController {
 	}
 	
 	@RequestMapping("dboardprev.do")
-	public String dboardPrev(HttpServletRequest request,Model model, Dboard dboard) {
+	public String dboardPrev(Model model, Dboard dboard) {
 		
 		logger.info("SearchFiled : " + dboard.getSearchFiled());
 		logger.info("SearchValue : " + dboard.getSearchValue());

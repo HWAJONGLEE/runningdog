@@ -61,9 +61,7 @@
                          	<!-- 게시물 조회한 숫자 출력 -->
                             <h4>전체 ${ requestScope.totalCount }마리 '작은 천사'</h4>
                             <div>
-                            <c:if test="${ !empty sessionScope.loginMember}">
                                 <a href="dinsertPage.do" class="writeBtn">글쓰기</a>
-                            </c:if>
                                 <div>
                                 <c:url var = "dCate" value= "dboardList.do">
 									<c:param name="local" value="${ pageVO.local }"/>
@@ -127,9 +125,9 @@
                                  <li class="grid-item" >
                                     <div>
                                         <a href="${dboardView}" class="chooseIcon">보호중</a>
-                                        <a data-id="${ d.dNum }" data-title="${ d.dTitle }" data-summary="${ d.dContent }" data-image="${ d.listImage }"
+                                        <%-- <a data-id="${ d.dNum }" data-title="${ d.dTitle }" data-summary="${ d.dContent }" data-image="${ d.listImage }"
                                     	data-count="${ d.dCount }"
-                                        data-toggle="popover4" class="urlIcon xi-share-alt-o"></a>
+                                        data-toggle="popover4" class="urlIcon xi-share-alt-o"></a> --%>
                                         <a class="animalImg" href ="${dboardView }"><img src="/runningdog/resources/dboard/dboardImage/${d.listImage }"></a>
                                     </div>
                                     <h3 onclick="location='${dboardView}'">${ d.dTitle }</h3>
@@ -151,7 +149,7 @@
                                 <li class="grid-item close">
                                     <div>
                                         <a href="${dboardView}" class="chooseIcon">인계완료</a>
-                                        <a data-id="${ d.dNum }" data-title="${ d.dTitle }"  data-image="${ d.listImage }" data-toggle="popover4" class="urlIcon xi-share-alt-o"></a>
+                                        <%-- <a data-id="${ d.dNum }" data-title="${ d.dTitle }"  data-image="${ d.listImage }" data-toggle="popover4" class="urlIcon xi-share-alt-o"></a> --%>
                                         <a class="animalImg" href="${dboardView}" ><img src="/runningdog/resources/dboard/dboardImage/${d.listImage }"></a>
                                     </div>
                                     <h3 onclick="location='${dboardView}'"><c:out value='${ d.dTitle }'/></h3>

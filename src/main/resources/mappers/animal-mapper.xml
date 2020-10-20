@@ -77,14 +77,14 @@
 	</select>
 	
 	<select id="selectPrev" parameterType="Animal" resultType="string">
-		SELECT NVL(MIN(DESERTION_NO),#{desertionNo})
+		SELECT NVL(MAX(DESERTION_NO),#{desertionNo})
 		FROM ANIMAL
 		WHERE 1=1
 		<if test="searchFiled != null and searchFiled !=''">
 			AND ${searchFiled} LIKE '%' || #{searchValue} || '%'
 		</if>
 		<![CDATA[
-		AND DESERTION_NO > #{ desertionNo }
+		AND DESERTION_NO < #{ desertionNo }
 		]]>
 	</select>
 	
